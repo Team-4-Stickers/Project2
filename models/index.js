@@ -1,4 +1,3 @@
-"use strict";
 
 var fs = require("fs");
 var path = require("path");
@@ -39,4 +38,11 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-module.exports = db;
+db.users = require('../models/users.js')(sequelize, Sequelize);  
+db.gifts = require('../models/gifts.js')(sequelize, Sequelize);  
+
+//Relations
+db.gifts.belongsTo(db.users);  
+db.users.hasMany(db.gifts);  
+
+module.exports = db;  
