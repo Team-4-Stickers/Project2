@@ -1,4 +1,3 @@
-"use strict";
 
 var fs = require("fs");
 var path = require("path");
@@ -22,7 +21,7 @@ if (config.use_env_variable) {
 fs.readdirSync(__dirname)
   .filter(function(file) {
     return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+      file.indexOf(".") !== 0 && (file !== basename) && (file.slice(-3) === ".js")
     );
   })
   .forEach(function(file) {
@@ -39,4 +38,11 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-module.exports = db;
+// db.users = require('../models/users.js')(sequelize, Sequelize);  
+// db.gifts = require('../models/gifts.js')(sequelize, Sequelize);  
+
+// //Relations
+// db.gifts.belongsTo(db.users);  
+// db.users.hasMany(db.gifts);  
+
+module.exports = db;  
