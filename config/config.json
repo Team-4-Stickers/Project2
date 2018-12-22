@@ -3,6 +3,7 @@
     "username": "project2",
     "password": "password",
     "database": "project2",
+
     "host": "localhost",
     "dialect": "mysql"
   },
