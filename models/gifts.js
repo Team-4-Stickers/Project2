@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {  
-    const Gifts = sequelize.define('Gifts', {
+    const Gift = sequelize.define('Gift', {
   
       name: {
         type: DataTypes.TEXT,
@@ -12,10 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     });
      
 
-    //one user is going to have many Gifts 
+    //one user is going to have many Gift 
       
-        Gifts.associate = function(models) {
-            Gifts.belongsTo(models.User, {
+        Gift.associate = function(models) {
+            Gift.belongsTo(models.User, {
               foreignKey: {
                 allowNull: false
               }
@@ -23,5 +23,5 @@ module.exports = (sequelize, DataTypes) => {
           };
     
           
-    return Gifts;
+    return Gift;
   };

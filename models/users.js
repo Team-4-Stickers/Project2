@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {  
-  const Users = sequelize.define('Users', {
+  const User = sequelize.define('User', {
     id: {
       primaryKey: true,
 
@@ -26,10 +26,10 @@ module.exports = (sequelize, DataTypes) => {
     },
 
   });
-  Users.associate = function(models) {
-    Users.hasMany(models.Gifts, {
+  User.associate = function(models) {
+    User.hasMany(models.Gift, {
       onDelete: "cascade"
     });
   };
-  return Users;
+  return User;
 };
