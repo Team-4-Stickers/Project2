@@ -2,42 +2,42 @@
 <html lang="en">
 
 <head>
-    <title>Passport Authentication</title>
+    <title>Gift Master - Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            </div>
+    <p class="animated fadeInLeft">GIFT MASTER</p>
+    <p class="animated fadeInRight">EXCHANGE MADE EASY</p>
+
+    <form class="row login">
+        <div class="col-3"></div>
+        <div class="col-2 form-group">
+            <input type="email" class="form-control" id="email-input" placeholder="Your Email Address">
         </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2>Login Form</h2>
-                <form class="login">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="email-input" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="password-input" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-default">Login</button>
-                </form>
-                <br />
-                <p>Or sign up <a href="/signup">here</a></p>
-            </div>
+        <div class="col-2 form-group">
+            <input type="password" class="form-control" id="password-input" placeholder="Your Password">
         </div>
+        <button type="submit" class="col-2 btn btn-default">LOGIN</button>
+    </form>
+    <div class="row">
+        <div class="col-7"></div>
+        <p class="col-2 sign-up">Need an account? <a class="sign-up-link" href="/signup">SIGN UP</a></p>
     </div>
 
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Javascript -->
     <script type="text/javascript" src="js/login.js"></script>
 
 </body>
