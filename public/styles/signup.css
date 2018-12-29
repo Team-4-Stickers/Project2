@@ -1,0 +1,16 @@
+body {
+    background-image: url("../images/background_white.png");
+    background-size:cover;
+  }
+
+  .avatar-selected {
+    border: 4px solid #3f6a8a;
+    border-radius: 50%;
+  }
+
+  #avatar1:hover, #avatar2:hover, #avatar3:hover, #avatar4:hover, #avatar5:hover, #avatar6:hover {
+    border: 4px solid #3f6a8a;
+    border-radius: 50%;
+  }
+
+  

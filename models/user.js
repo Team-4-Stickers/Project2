@@ -25,6 +25,10 @@ module.exports = function (sequelize, DataTypes) {
         last_name: {
             type: DataTypes.STRING,
             required: true
+        },
+        avatar_source: {
+            type: DataTypes.STRING,
+            required: true
         }
     });
     console.log(User);
