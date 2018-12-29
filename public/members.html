@@ -24,17 +24,29 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="navbar-nav">
+            <h1> <a class="nav-item nav-link" href="#">
+                    <i class="fas fa-user-circle"></i> Profile
+                </a></h1>
+            <h1> <a class="nav-item nav-link" href="#">
+                    <h1><i class="fas fa-users"></i> Join Event</h1>
+                </a></h1>
+            <h1><a class="nav-item nav-link" href="#"><i class="far fa-list-alt"></i> Your Gifts</a></h1>
+            <h1><a class="nav-item nav-link" href="#" id="create-event-butt" data-toggle="modal" data-target="#ModalGroupForm">
+                    <i class="fas fa-plus-circle"></i> Add
+                    Event</a></h1>
+        </div>
+
+    </nav>
     <div class="container">
         <!-- Anything you get back from passport user -->
         <h2 class="member-display"><img class="avatar" src="./images/sloth_avatar.png" alt="Avatar"> Welcome <span
                 class="member-name">"Your
                 Name"</span>!</h2>
-        <!-- Add event button -->
-        <h2 class="add-display">ADD NEW GROUP <button id="create-group-butt" type="button" class="btn btn-primary btn-lg"
-                data-toggle="modal" data-target="#ModalGroupForm">
-                <i class="fas fa-plus-square"></i>
-            </button>
-        </h2>
+
         <!-- Search bar -->
         <h2>SEARCH</h2>
         <div class="search-container">
@@ -54,13 +66,13 @@
                 <div class="modal-content">
                     <div class="modal-header" style="padding:35px 50px;">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4><i class="fas fa-info-circle"></i> Tell Us About Your Group:</h4>
+                        <h4><i class="fas fa-info-circle"></i> Tell Us About Your Event:</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
                         <form role="form">
                             <div class="form-group">
-                                <label for="groupname"><i class="fas fa-gifts"></i> Group / Event Name</label>
-                                <input type="text" class="form-control" id="groupname" placeholder="Enter a recognizable name for your group">
+                                <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
+                                <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
                             </div>
                             <div class="form-group">
                                 <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
@@ -70,8 +82,13 @@
                                 <label for="time"><i class="fas fa-clock"></i> Event Time</label>
                                 <input type="time" class="form-control" id="time" placeholder="Enter your event time">
                             </div>
-                            <button type="submit" class="btn btn-success btn-block"><i class="fas fa-users"></i> Submit
-                                Group</button>
+                            <div class="form-group">
+                                <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
+                                <input type="text" class="form-control" id="time" placeholder="Enter your event location">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
+                                Submit
+                                Event</button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -87,6 +104,7 @@
 
         <!-- group display -->
         <h2>EVENTS</h2>
+
         <hr>
         <div id="your-groups"></div>
         <!-- Logout option -->

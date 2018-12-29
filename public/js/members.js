@@ -5,7 +5,13 @@ $(document).ready(function () {
         $(".member-name").text(data.email);
     });
     //Activate modal
-    $("#create-group-butt").click(function () {
+    $("#create-event-butt").click(function () {
         $("#ModalGroupForm").modal();
     });
-});
+
+    //create card on create event
+    $("#submitEventButt").click(function () {
+        var eventName = $("#eventName").val();
+        console.log(eventName);
+    })
+})
