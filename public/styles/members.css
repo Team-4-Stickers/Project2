@@ -1,0 +1,87 @@
+/* Background image */
+body {
+    background-image: url("../images/background_white.png");
+    background-size:cover;
+  }
+  
+  /* Background div */
+  .container {
+    background-image: linear-gradient(to bottom, rgb(221, 165, 182, 0.7), rgb(235, 178, 177, 0.7), rgb(242, 194, 176, 0.7), rgb(244, 212, 181, 0.7), rgb(241, 230, 193, 0.7));
+    box-shadow: 0 14px 28px rgb(77, 94, 114, 0.7), 6px 18px 20px rgb(221, 165, 182, 0.7), 10px 20px 24px rgb(241, 230, 193, 0.7);
+    width: 80%;
+    height: 700px;
+    margin-top: 40px;
+  }
+
+  .avatar, .member-display, .add-display {
+    display: inline;
+  }
+
+  .avatar {
+    margin-top: 10px;
+  }
+
+  .add-display {
+    float: right;
+    padding-top: 25px;
+    color: white;
+    text-shadow: 2px 2px 3px #4d5e72;
+  }
+
+  h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #3f6a8a;
+    text-shadow: 2px 2px 3px #f1e6c1;
+  }
+  
+  hr {
+    border: 1px solid white;
+    box-shadow: 0 2px 4px rgb(77, 94, 114, 0.7);
+    }
+  
+  /* Search container - rounded */
+  .search-container {
+    background-color: white;
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow:0 0 8px #666;
+  }
+  
+  /* Fix input box and button color */
+  .input, .submit {
+    border: none;
+    background-color: white;
+  }
+  
+  .input {
+    width: 90%;
+    color: #3f6a8a;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+  .input:focus {
+    outline:none;
+  }
+  
+  ::placeholder {
+    color: lightgray;
+  }
+  
+  .submit {
+    font-size: 1em;
+    color: lightgray;
+    padding: 2px;
+  }
+  
+  #create-group-butt {
+    color: white;
+    background-color: #3f6a8a;
+    border-radius: 40px;
+    box-shadow:0 0 8px #666;
+  }
+
+  .logout {
+    float: right;
+  }
