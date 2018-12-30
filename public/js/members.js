@@ -16,6 +16,7 @@ $(document).ready(function () {
     $("#create-event-butt").click(function () {
         $("#ModalGroupForm").modal();
     });
+    //random code generator should go here i think, but it breaks when it is
 
     //create card on create event
     $("#submitEventButt").click(function () {

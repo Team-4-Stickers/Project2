@@ -3,6 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 var session = require("express-session");
+var randomCodes = require("./config/randomCodes");
 
 var db = require("./models");
 
@@ -35,7 +36,7 @@ var syncOptions = { force: true };
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
+  syncOptions.force = false;
 }
 console.log(syncOptions);
 // Starting the server, syncing our models ------------------------------------/
@@ -43,11 +44,22 @@ console.log(syncOptions);
 db.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
     console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser ");
+     
   });
+    
 });
+
+var assert = require('assert');
+
+//RANDOM CODE GENERATOR
+var RandomCodes = require('./config/randomCodes');
+var rc = new RandomCodes();
+console.log("OPTIONS: %j", rc.getOptions());
+var code = rc.generate();
+console.log("CODE: %s", code);
+
+
+console.log(syncOptions);
 
 module.exports = app;
