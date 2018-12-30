@@ -28,7 +28,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         avatar_source: {
             type: DataTypes.STRING,
-            required: true
+            required: true,
         }
     });
     console.log(User);

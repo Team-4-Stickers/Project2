@@ -29,7 +29,7 @@ $(document).ready(function () {
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function (event) {
         event.preventDefault();
-        console.log(source);
+
         var userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim(),
@@ -38,8 +38,8 @@ $(document).ready(function () {
             avatar_source: source
         };
 
-        if (!userData.email || !userData.password) {
-            return;
+        if (!userData.email || !userData.password || !userData.first_name || !userData.last_name || !userData.avatar_source) {
+            return alert("Please, complete the form!");
         }
         // If we have an email and password, run the signUpUser function
         signUpUser(userData.email, userData.password, userData.first_name, userData.last_name, userData.avatar_source);
