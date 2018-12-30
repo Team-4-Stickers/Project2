@@ -1,31 +1,3 @@
-// var db = require("../models");
-
-// module.exports = function(app) {
-//   // Get all examples
-//   app.get("/api/examples", function(req, res) {
-//     db.Example.findAll({}).then(function(dbExamples) {
-//       res.json(dbExamples);
-//     });
-//   });
-
-//   // Create a new example
-//   app.post("/api/examples", function(req, res) {
-//     db.Example.create(req.body).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-
-//   // Delete an example by id
-//   app.delete("/api/examples/:id", function(req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function(
-//       dbExample
-//     ) {
-//       res.json(dbExample);
-//     });
-//   });
-// };
-
-
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
@@ -69,18 +41,26 @@ module.exports = function (app) {
 
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function (req, res) {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    }
-    else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        email: req.user.email,
-        id: req.user.id
-      });
-    }
+
+    console.log(req.user);
+
+    db.User.findOne({ where: { email: req.user.email } }).then(function (userData) {
+      res.json(userData);
+    });
+
   });
+  // if (!req.user) {
+  //   // The user is not logged in, send back an empty object
+  //   res.json({});
+  // }
+  // else {
+  //   // Otherwise send back the user's email and id
+  //   // Sending back a password, even a hashed password, isn't a good idea
+  //   res.json({
+  //     name: req.user.first_name,
+  //     avatar: req.user.avatar_source
+  //   });
+  // }
+  // });
 
 };

@@ -1,8 +1,16 @@
 $(document).ready(function () {
     // This file just does a GET request to figure out which user is logged in
     $.get("/api/user_data").then(function (data) {
-        // We probably don't need to display the e-mail...
-        $(".member-name").text(data.email);
+
+        console.log(data);
+
+        $(".member-name").text(data.first_name);
+
+        if (data.avatar_source == null) {
+            $(".avatar").attr("src", "./images/sloth_avatar.png");
+        } else {
+            $(".avatar").attr("src", data.avatar_source);
+        }
     });
     //Activate modal
     $("#create-event-butt").click(function () {
@@ -13,5 +21,5 @@ $(document).ready(function () {
     $("#submitEventButt").click(function () {
         var eventName = $("#eventName").val();
         console.log(eventName);
-    })
-})
+    });
+});
