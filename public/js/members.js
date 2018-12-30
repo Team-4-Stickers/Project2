@@ -12,15 +12,5 @@ $(document).ready(function () {
             $(".avatar").attr("src", data.avatar_source);
         }
     });
-    //Activate modal
-    $("#create-event-butt").click(function () {
-        $("#ModalGroupForm").modal();
-    });
-    //random code generator should go here i think, but it breaks when it is
 
-    //create card on create event
-    $("#submitEventButt").click(function () {
-        var eventName = $("#eventName").val();
-        console.log(eventName);
-    });
 });
