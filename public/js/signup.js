@@ -11,7 +11,7 @@ $(document).ready(function () {
     //Grab the source of the avatar and send it to the database
     $(".avatar").on("click", function () {
         source = $(this).attr("src");
-        console.log(source);
+        // console.log(source);
         var avatar = $(this);
         var avatars = [$("#avatar1"), $("#avatar2"), $("#avatar3"), $("#avatar4"), $("#avatar5"), $("#avatar6")];
 
@@ -29,6 +29,7 @@ $(document).ready(function () {
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function (event) {
         event.preventDefault();
+        console.log(source);
         var userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim(),
@@ -50,12 +51,13 @@ $(document).ready(function () {
 
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
-    function signUpUser(email, password, first_name, last_name) {
+    function signUpUser(email, password, first_name, last_name, avatar_source) {
         $.post("/api/signup", {
             email: email,
             password: password,
             first_name: first_name,
             last_name: last_name,
+            avatar_source: source
         }).then(function (data) {
             window.location.replace(data);
             // If there's an error, handle it by throwing up a bootstrap alert
