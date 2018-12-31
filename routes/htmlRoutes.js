@@ -28,4 +28,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
+  //TESTING HANDLEBARS
+  app.get("/handlebars", isAuthenticated, function (req, res) {
+
+    res.render("index", {});
+
+  });
+
 };

@@ -8,9 +8,9 @@ body {
   .container {
     background-image: linear-gradient(to bottom, rgb(221, 165, 182, 0.7), rgb(235, 178, 177, 0.7), rgb(242, 194, 176, 0.7), rgb(244, 212, 181, 0.7), rgb(241, 230, 193, 0.7));
     box-shadow: 0 14px 28px rgb(77, 94, 114, 0.7), 6px 18px 20px rgb(221, 165, 182, 0.7), 10px 20px 24px rgb(241, 230, 193, 0.7);
-    width: 80%;
-    height: 700px;
-    margin-top: 40px;
+    width: 98%;
+    height: auto;
+    margin-top: 10px;
   }
 
   .avatar, .member-display, .add-display {
@@ -85,3 +85,32 @@ body {
   .logout {
     float: right;
   }
+
+/* sticky footer */
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+footer {
+  border-top: 1px solid #3f6a8a;
+  background-size: 100% 200px;
+  background-position: center center;
+  background-color: #4d5e72;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#copyright{
+  margin-top: 15px;
+  text-shadow: 2px 2px 3px #f1e6c1;
+}
