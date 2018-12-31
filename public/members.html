@@ -29,89 +29,80 @@
 
         <div class="navbar-nav">
             <h1>
-                <a class="nav-item nav-link" href="#">
+                <a class="nav-item nav-link" href="#" id="profButt">
                     <i class="fas fa-user-circle"></i> Profile
                 </a>
-                <a class="nav-item nav-link" href="#">
+                <a class="nav-item nav-link" href="#" id="joinButt">
                     <i class="fas fa-users"></i> Join Event
                 </a>
                 <a class="nav-item nav-link" href="#" id="create-event-butt" data-toggle="modal" data-target="#ModalGroupForm">
                     <i class="fas fa-plus-circle"></i> Create New
                     Event</a>
-                <a class="nav-item nav-link" href="#"><i class="far fa-list-alt"></i> Your Gifts</a>
+                <a class="nav-item nav-link" href="#" id="giftButt"><i class="far fa-list-alt"></i> Your Gifts</a>
             </h1>
         </div>
 
 
     </nav>
-    <div class="container">
-        <!-- Anything you get back from passport user -->
-        <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
+    <div>
+        <div class="container">
+            <!-- Anything you get back from passport user -->
+            <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
 
-        <!-- Search bar -->
-        <h2>SEARCH</h2>
-        <div class="search-container">
-            <form action="/action_page.php">
-                <input class="input" type="text" placeholder=" Enter group code" name="groupSearch">
-                <button class="submit" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-        </div>
-        <br>
+            <!-- Search bar -->
+            <h2>SEARCH</h2>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input class="input" type="text" placeholder=" Enter Event Code" name="groupSearch">
+                    <button class="submit" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <br>
 
-        <!-- Modal content-->
-        <div class="modal fade" id="ModalGroupForm" role="dialog">
-            <div class="modal-dialog">
+            <!--Form content-->
+            <div>
+                <h2><i class="fas fa-info-circle"></i> CREATE EVENT</h2>
 
-                <div class="modal-content">
-                    <div class="modal-header" style="padding:35px 50px;">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4><i class="fas fa-info-circle"></i> Tell Us About Your Event:</h4>
-                    </div>
-                    <div class="modal-body" style="padding:40px 50px;">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
-                                <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
-                            </div>
-                            <div class="form-group">
-                                <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
-                                <input type="date" class="form-control" id="date" placeholder="Enter your event date">
-                            </div>
-                            <div class="form-group">
-                                <label for="time"><i class="fas fa-clock"></i> Event Time</label>
-                                <input type="time" class="form-control" id="time" placeholder="Enter your event time">
-                            </div>
-                            <div class="form-group">
-                                <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
-                                <input type="text" class="form-control" id="time" placeholder="Enter your event location">
-                            </div>
-                            <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
-                                Submit
-                                Event</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal"><i
-                                class="fas fa-times"></i>
-                            Nevermind</button>
-                    </div>
+                <div class="form-body" style="padding:40px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
+                            <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
+                        </div>
+                        <div class="form-group">
+                            <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
+                            <input type="date" class="form-control" id="date" placeholder="Enter your event date">
+                        </div>
+                        <div class="form-group">
+                            <label for="time"><i class="fas fa-clock"></i> Event Time</label>
+                            <input type="time" class="form-control" id="time" placeholder="Enter your event time">
+                        </div>
+                        <div class="form-group">
+                            <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
+                            <input type="text" class="form-control" id="time" placeholder="Enter your event location">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
+                            Submit Event</button>
+                    </form>
                 </div>
 
             </div>
+            <br>
+            <!-- group display -->
+            <h2>EVENTS</h2>
+
         </div>
-        <br>
 
-        <!-- group display -->
-        <h2>EVENTS</h2>
 
-        <hr>
-        <div id="your-groups"></div>
-        <!-- Logout option -->
-        <a class="logout" href="/logout">
-            Logout
-        </a>
+    </div>
+
+    <div id="your-groups"></div>
+    <!-- Logout option -->
+    <a class="logout" href="/logout">
+        Logout
+    </a>
     </div>
 
 </body>
