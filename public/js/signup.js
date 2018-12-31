@@ -8,6 +8,13 @@ $(document).ready(function () {
     var lastNameInput = $("input#last-name-input");
     var source;
 
+    var firstNameValidationModal = $("#firstNameValidationModal");
+    var lastNameValidationModal = $("#lastNameValidationModal");
+    var emailValidationModal = $("#emailValidationModal");
+    var passwordValidationModal = $("#passwordValidationModal");
+    var avatarValidationModal = $("#avatarValidationModal");
+    var span = $(".close")[0];
+
     //Grab the source of the avatar and send it to the database
     $(".avatar").on("click", function () {
         source = $(this).attr("src");
@@ -38,15 +45,40 @@ $(document).ready(function () {
             avatar_source: source
         };
 
-        if (!userData.email || !userData.password || !userData.first_name || !userData.last_name || !userData.avatar_source) {
-            return alert("Please, complete the form!");
-        }
+        // if (!userData.email || !userData.password || !userData.first_name || !userData.last_name || !userData.avatar_source) {
+        //     return alert("Please, complete the form!");
+        // }
+
+        if (!userData.email) {
+            return emailValidationModal[0].style.display = "block";
+        };
+        if (!userData.password) {
+            return passwordValidationModal[0].style.display = "block";
+        };
+        if (!userData.first_name) {
+            return firstNameValidationModal[0].style.display = "block";
+        };
+        if (!userData.last_name) {
+            return lastNameValidationModal[0].style.display = "block";
+        };
+        if (!userData.avatar_source) {
+            return avatarValidationModal[0].style.display = "block";
+        };
+
         // If we have an email and password, run the signUpUser function
         signUpUser(userData.email, userData.password, userData.first_name, userData.last_name, userData.avatar_source);
         emailInput.val("");
         passwordInput.val("");
         firstNameInput.val("");
         lastNameInput.val("");
+    });
+
+    $(".close").on("click", function () {
+        firstNameValidationModal[0].style.display = "none";
+        lastNameValidationModal[0].style.display = "none";
+        emailValidationModal[0].style.display = "none";
+        passwordValidationModal[0].style.display = "none";
+        avatarValidationModal[0].style.display = "none";
     });
 
     // Does a post to the signup route. If successful, we are redirected to the members page
