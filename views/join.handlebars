@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
     <div class="navbar-nav">
         <a class="nav-title" href="/members">GIFT MASTER</a>
         <a class="nav-1 nav-item nav-link" href="/members">
@@ -14,26 +13,18 @@
     </div>
 </nav>
 
-
-<div class="container">
-    <!-- Anything you get back from passport user -->
-    <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
-
-    <!-- group display -->
-    <h2>EVENTS</h2>
-    <ul>
-        <!-- assuming this is how the db colums will be set up -->
-        {{#each user.event}}
-        {{event-block}}
-        {{/each}}
-    </ul>
-
-    <div id="your-groups"></div>
-
+{{!-- Search your events --}}
+<h2>SEARCH</h2>
+<div class="search-container">
+    <form action="/action_page.php">
+        <input class="input" type="text" placeholder=" Enter Event Code" name="groupSearch">
+        <button class="submit" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+    </form>
 </div>
 
-<footer>
-    <p id="copyright">Copyright &copy Stickers 2019</p>
-    <!-- Logout option -->
-    <a class="logout" href="/logout">LOG OUT</a>
-</footer>
+{{!-- Append the search results --}}
+<div class="search-results">
+
+</div>

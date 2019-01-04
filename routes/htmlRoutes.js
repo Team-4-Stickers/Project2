@@ -29,11 +29,31 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-
+  // Render the profile page:
   app.get("/members", isAuthenticated, function (req, res) {
 
     res.render("index", {});
 
   });
 
+  // Render the add new event page:
+  app.get("/new", isAuthenticated, function (req, res) {
+
+    res.render("new", {});
+
+  });
+
+  // Render the gitf page
+  app.get("/gifts", isAuthenticated, function (req, res) {
+
+    res.render("gifts", {});
+
+  });
+
+  //Render the join page
+  app.get("/join", isAuthenticated, function (req, res) {
+
+    res.render("join", {});
+
+  });
 };

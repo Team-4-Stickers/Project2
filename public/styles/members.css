@@ -82,10 +82,6 @@ body {
       box-shadow:0 0 8px #666;
     }
 
-    .logout {
-      float: right;
-    }
-
   /* nav bar */
   .navbar-nav {
     background-image: linear-gradient(to left top, #dda5b6, #ebb2b1, #f2c2b0, #f4d4b5, #f1e6c1);
@@ -163,4 +159,17 @@ body {
 
   #copyright{
     margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .logout {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #3f6a8a;
+    font-weight: bold;
+  }
+
+  .logout:hover {
+    color: #dda5b6;
+    text-decoration: none;
   }
