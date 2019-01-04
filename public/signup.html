@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="./styles/signup.css">
 </head>
 
 <body>
 
     <div class="container">
-        <!-- Choose an avatar -->
-        <h1>Choose an avatar for your profile:</h1>
-        <div class="row">
+        <h1 class="sign-up-title">GIFT MASTER SIGN UP!</h1>
+        <h1 class="sign-up-sub-title">CHOOSE YOUR AVATAR:</h1>
 
+        <!-- Avatars -->
+        <div class="avatars row">
             <div class="col-md-2"><img class="avatar" id="avatar1" src="./images/cactus_avatar.png" alt=""></div>
             <div class="col-md-2"><img class="avatar" id="avatar2" src="./images/cloud_avatar.png" alt=""></div>
             <div class="col-md-2"><img class="avatar" id="avatar3" src="./images/pencil_avatar.png" alt=""></div>
@@ -25,34 +28,33 @@
             <div class="col-md-2"><img class="avatar" id="avatar6" src="./images/alien_avatar.png" alt=""></div>
         </div>
 
+        <!-- Sign Up Form -->
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2>Sign Up Form</h2>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-md-offset-3">
                 <form class="signup">
                     <div class="form-group">
-                        <label for="exampleInputFirstName">First Name</label>
-                        <input type="first_name" class="form-control" id="first-name-input" placeholder="First Name">
+                        <input type="first_name" class="form-control" id="first-name-input" placeholder="Your First Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputLastName">Last Name</label>
-                        <input type="last_name" class="form-control" id="last-name-input" placeholder="Last Name">
+                        <input type="last_name" class="form-control" id="last-name-input" placeholder="Your Last Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                        <input type="email" class="form-control" id="email-input" placeholder="Your Email Address">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="password-input" placeholder="Password">
+                        <input type="password" class="form-control" id="password-input" placeholder="Your Password">
                     </div>
                     <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <span class="sr-only">Error:</span> <span class="msg"></span>
                     </div>
-                    <button type="submit" class="btn btn-default">Sign Up</button>
+
+                    <button type="submit" class="btn btn-default">SIGN UP</button>
+
                 </form>
                 <br />
-                <p>Or log in <a href="/login">here</a></p>
+                <p class="log-in">Have an account? <a class="log-in-link" href="/login">LOG IN</a></p>
             </div>
         </div>
     </div>
@@ -68,28 +70,28 @@
     <div id="lastNameValidationModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Please enter your last name!</p>
+            <p class="text-center">Please enter your last name!</p>
         </div>
     </div>
 
     <div id="emailValidationModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Please enter your email address!</p>
+            <p class="text-center">Please enter your email address!</p>
         </div>
     </div>
 
     <div id="passwordValidationModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Please choose a password!</p>
+            <p class="text-center">Please choose a password!</p>
         </div>
     </div>
 
     <div id="avatarValidationModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Please choose an avatar!</p>
+            <p class="text-center">Please choose an avatar!</p>
         </div>
     </div>
 
