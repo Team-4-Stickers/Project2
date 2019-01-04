@@ -14,3 +14,19 @@ $(document).ready(function () {
     });
 
 });
+
+$(".event-view").on("click", function (event) {
+var id = $(this).data("id");
+
+// Send the GET request.
+$.ajax("/api/events/" + id, {
+    type: "GET"
+}).then(
+    function () {
+        console.log("viewing event", id);
+        // Reload the page to get the updated list
+        location.reload();
+    }
+);
+});
+});
