@@ -14,6 +14,92 @@
     </div>
 </nav>
 
+<div>
+    <div class="container">
+        <!-- Anything you get back from passport user -->
+        <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
+
+        <!-- Search bar -->
+        <h2>SEARCH</h2>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input class="input" type="text" placeholder=" Enter Event Code" name="groupSearch">
+                <button class="submit" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <br>
+
+        <!--Form content-->
+        <div>
+            <h2><i class="fas fa-info-circle"></i> CREATE EVENT</h2>
+
+            <div class="form-body" style="padding:40px 50px;">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
+                        <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
+                    </div>
+                    <div class="form-group">
+                        <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
+                        <input type="date" class="form-control" id="date" placeholder="Enter your event date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time"><i class="fas fa-clock"></i> Event Time</label>
+                        <input type="time" class="form-control" id="time" placeholder="Enter your event time">
+                    </div>
+                    <div class="form-group">
+                        <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
+                        <input type="text" class="form-control" id="time" placeholder="Enter your event location">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
+                        Submit Event</button>
+                </form>
+            </div>
+
+        </div>
+        <br>
+        <!-- group display -->
+        <h2>EVENTS</h2>
+        <ul>
+            <!-- assuming this is how the db colums will be set up -->
+            {{#each user.event}}
+            {{event-block}}
+            {{/each}}
+        </ul>
+=======
+    <div class="navbar-nav">
+        <a class="nav-title" href="/handlebars">GIFT MASTER</a>
+        <a class="nav-1 nav-item nav-link" href="/profile">
+            <i class="fas fa-user-circle"></i> PROFILE
+        </a>
+        <a class="nav-2 nav-item nav-link" href="/join">
+            <i class="fas fa-users"></i> JOIN
+        </a>
+        <a class="nav-3 nav-item nav-link" href="/new" id="create-event-butt" data-toggle="modal" data-target="#ModalGroupForm">
+            <i class="fas fa-plus-circle"></i> NEW EVENT</a>
+        <a class="nav-4 nav-item nav-link" href="gifts"><i class="far fa-list-alt"></i> YOUR GIFTS</a>
+
+    </div>
+
+
+</div>
+
+<div id="your-groups"></div>
+<!-- Logout option -->
+<a class="logout" href="/logout">
+    Logout
+</a>
+</div>
+
+<footer>
+    <p id="copyright">Copyright &copy Stickers 2019</p>
+</footer>
+</body>
+
+<script src="./js/members.js"></script>
+
 <div class="container">
 
     {{!--
@@ -33,7 +119,3 @@
     <br> --}}
 
 </div>
-
-<footer>
-    <p id="copyright">Copyright &copy Stickers 2019</p>
-</footer>
