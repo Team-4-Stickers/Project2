@@ -15,7 +15,7 @@ module.exports = function (app) {
     //connection.query(function (error, data) {
     // if (err) throw err;
     res.render("index", {
-      members: data
+      // members: data
     });
   });
   //});
