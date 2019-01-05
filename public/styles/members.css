@@ -6,11 +6,11 @@ body {
   
   /* Background div */
   .container {
-    /* background-image: linear-gradient(to bottom, rgb(221, 165, 182, 0.7), rgb(235, 178, 177, 0.7), rgb(242, 194, 176, 0.7), rgb(244, 212, 181, 0.7), rgb(241, 230, 193, 0.7));
-    box-shadow: 0 14px 28px rgb(77, 94, 114, 0.7), 6px 18px 20px rgb(221, 165, 182, 0.7), 10px 20px 24px rgb(241, 230, 193, 0.7); */
-    width: 98%;
-    height: auto;
-    margin-top: 10px;
+    width: 94%;
+    padding-top: 20px;
+    margin-left: 53px;
+    box-sizing: content-box;  
+    border: 1px solid transparent;
   }
 
   .avatar, .member-display, .add-display {
@@ -29,9 +29,7 @@ body {
   }
 
   h2 {
-    font-family: 'Fredoka One', cursive;
     color: #3f6a8a;
-    text-shadow: 2px 2px 3px #f1e6c1;
   }
   
   hr {
@@ -91,7 +89,7 @@ body {
 
   .nav-title {
     color: #3f6a8a;
-    margin-left: 50px;
+    margin-left: 53px;
     font-family: 'Fredoka One', cursive;
     font-size: 28px;
     text-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
@@ -154,7 +152,7 @@ body {
     height: 40px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   #copyright{
@@ -173,3 +171,27 @@ body {
     color: #dda5b6;
     text-decoration: none;
   }
+
+  .right {
+    height: 650px;
+    background-image: linear-gradient(to left top, rgb(221, 165, 182, 0.4), rgb(235, 178, 177, 0.4), rgb(242, 194, 176, 0.4), rgb(244, 212, 181, 0.4), rgb(241, 230, 193, 0.4));    
+  }
+
+  .left-top {
+    padding-top: 10px;
+    padding-left: 20px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
+  }
+
+  .left-bottom {
+    height: 400px;
+    background-color: #3f6a8a;
+    box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
+  }
+
+  .nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ } 

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('.left-bottom').addClass('animated bounceOutLeft');
+
     // This file just does a GET request to figure out which user is logged in
     $.get("/api/user_data").then(function (data) {
 

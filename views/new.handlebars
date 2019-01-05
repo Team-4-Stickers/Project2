@@ -10,34 +10,56 @@
         </a>
         <a class="nav-3 nav-item nav-link" href="/new" id="create-event-butt" data-toggle="modal" data-target="#ModalGroupForm">
             <i class="fas fa-plus-circle"></i> NEW EVENT</a>
-        <a class="nav-4 nav-item nav-link" href="gifts"><i class="far fa-list-alt"></i> YOUR GIFTS</a>
+        <a class="nav-4 nav-item nav-link" href="gifts"><i class="fas fa-gift"></i> YOUR GIFTS</a>
     </div>
 </nav>
 
 {{!-- Create new event --}}
-<div>
-    <h2><i class="fas fa-info-circle"></i> CREATE EVENT</h2>
+<div class="container">
 
-    <div class="form-body" style="padding:40px 50px;">
-        <form role="form">
-            <div class="form-group">
-                <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
-                <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
+    <div class="row">
+        <div class="nopadding col-md-4">
+            <div class="left-top">
+                <!-- Anything you get back from passport user -->
+                <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
             </div>
-            <div class="form-group">
-                <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
-                <input type="date" class="form-control" id="date" placeholder="Enter your event date">
+            <div class="left-bottom">
+                <br>
+                <h2><i class="fas fa-info-circle"></i> CREATE EVENT</h2>
             </div>
-            <div class="form-group">
-                <label for="time"><i class="fas fa-clock"></i> Event Time</label>
-                <input type="time" class="form-control" id="time" placeholder="Enter your event time">
+        </div>
+        <div class="nopadding col-md-8">
+            <div class="right">
+
+                <div class="form-body" style="padding:40px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
+                            <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
+                        </div>
+                        <div class="form-group">
+                            <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
+                            <input type="date" class="form-control" id="date" placeholder="Enter your event date">
+                        </div>
+                        <div class="form-group">
+                            <label for="time"><i class="fas fa-clock"></i> Event Time</label>
+                            <input type="time" class="form-control" id="time" placeholder="Enter your event time">
+                        </div>
+                        <div class="form-group">
+                            <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
+                            <input type="text" class="form-control" id="time" placeholder="Enter your event location">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
+                            Submit Event</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
-                <input type="text" class="form-control" id="time" placeholder="Enter your event location">
-            </div>
-            <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
-                Submit Event</button>
-        </form>
+        </div>
     </div>
 </div>
+
+<footer>
+    <p id="copyright">Copyright &copy Stickers 2019</p>
+    <!-- Logout option -->
+    <a class="logout" href="/logout">LOG OUT</a>
+</footer>
