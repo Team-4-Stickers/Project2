@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
     <div class="navbar-nav">
         <a class="nav-title" href="/members">GIFT MASTER</a>
         <a class="nav-1 nav-item nav-link" href="/members">
@@ -23,24 +22,28 @@
                 <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
             </div>
             <div class="left-bottom">
-                <!-- group display -->
                 <br>
-                <h2>EVENTS</h2>
-                <ul>
-                    <!-- assuming this is how the db colums will be set up -->
-                    {{#each user.event}}
-                    {{event-block}}
-                    {{/each}}
-                </ul>
+                {{!-- Search your events --}}
+                <h2>SEARCH</h2>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input class="input" type="text" placeholder=" Enter Event Code" name="groupSearch">
+                        <button class="submit" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="nopadding col-md-8">
             <div class="right">
-                <div id="your-groups"></div>
+                {{!-- Append the search results --}}
+                <div class="search-results">
+
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 <footer>

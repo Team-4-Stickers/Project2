@@ -14,7 +14,6 @@
     </div>
 </nav>
 
-
 <div class="container">
     <div class="row">
         <div class="nopadding col-md-4">
@@ -23,26 +22,15 @@
                 <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
             </div>
             <div class="left-bottom">
-                <!-- group display -->
                 <br>
-                <h2>EVENTS</h2>
-                <ul>
-                    <!-- assuming this is how the db colums will be set up -->
-                    {{#each user.event}}
-                    {{event-block}}
-                    {{/each}}
-                </ul>
             </div>
         </div>
         <div class="nopadding col-md-8">
             <div class="right">
-                <div id="your-groups"></div>
             </div>
         </div>
     </div>
-
 </div>
-
 <footer>
     <p id="copyright">Copyright &copy Stickers 2019</p>
     <!-- Logout option -->
