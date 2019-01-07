@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/members.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Javascript -->
-    <link href="../public/js/members-modal.js" rel="javascript">
+    <!-- <link href="../public/js/members-modal.js" rel="javascript"> -->
 </head>
 
 <body>
@@ -52,9 +53,9 @@
             <!-- Search bar -->
             <h2>SEARCH</h2>
             <div class="search-container">
-                <form action="/action_page.php">
+                <form>
                     <input class="input" type="text" placeholder=" Enter Event Code" name="groupSearch">
-                    <button class="submit" type="submit">
+                    <button class="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </form>
@@ -83,30 +84,56 @@
                             <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
                             <input type="text" class="form-control" id="time" placeholder="Enter your event location">
                         </div>
-                        <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
-                            Submit Event</button>
+                        
                     </form>
+                    <button class="btn btn-success btn-block" type="button" data-toggle="modal" data-target="#myModal"
+                    id="submitEventButt"><i class="fas fa-users"></i>
+                    Submit Event</button>
+                </div>
+                <!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+                    <br>
+                    <!-- group display -->
+                    <h2>EVENTS</h2>
+
                 </div>
 
+
             </div>
-            <br>
-            <!-- group display -->
-            <h2>EVENTS</h2>
 
+            <div id="your-groups"></div>
+            <!-- Logout option -->
+            <a class="logout" href="/logout">
+                Logout
+            </a>
         </div>
-
-
-    </div>
-
-    <div id="your-groups"></div>
-    <!-- Logout option -->
-    <a class="logout" href="/logout">
-        Logout
-    </a>
-    </div>
 
 </body>
 
-<script src="./js/members.js"></script>
+<!-- <script src="./js/members.js"></script> -->
+<script src="./js/members-modal.js"></script>
+
 
 </html>

@@ -1,4 +1,4 @@
-//GENERATING RANDOM CODE 
+// //GENERATING RANDOM CODE 
 var xtend = require('xtend');
 
 var RandomCodes = function (options) {

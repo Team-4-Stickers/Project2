@@ -45,19 +45,19 @@ db.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser ");
-     
+
   });
-    
+
 });
 
 var assert = require('assert');
 
 //RANDOM CODE GENERATOR
-var RandomCodes = require('./config/randomCodes');
-var rc = new RandomCodes();
-console.log("OPTIONS: %j", rc.getOptions());
-var code = rc.generate();
-console.log("CODE: %s", code);
+// var RandomCodes = require('./config/randomCodes');
+// var rc = new RandomCodes();
+// console.log("OPTIONS: %j", rc.getOptions());
+// var code = rc.generate();
+// console.log("CODE: %s", code);
 
 
 console.log(syncOptions);
