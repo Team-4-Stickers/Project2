@@ -25,32 +25,48 @@
             </div>
             <div class="left-bottom">
                 <br>
-                <h2><i class="fas fa-info-circle"></i> CREATE EVENT</h2>
             </div>
         </div>
         <div class="nopadding col-md-8">
             <div class="right">
+                <br>
+                <h2 class="container-title"><i class="fas fa-plus-circle"></i> CREATE EVENT</h2>
 
-                <div class="form-body" style="padding:40px 50px;">
+                <div class="row form-body" style="padding:40px 50px;">
                     <form role="form">
-                        <div class="form-group">
-                            <label for="groupname"><i class="fas fa-gifts"></i> Event Name</label>
-                            <input type="text" class="form-control" id="Eventname" placeholder="Enter a recognizable name for your event">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="event-name"><i class="fas fa-gifts"></i> EVENT NAME</label>
+                                <input type="text" class="form-control" id="event-name" placeholder="Enter a recognizable name for your event">
+                            </div>
+                            <div class="form-group">
+                                <label for="date"><i class="fas fa-calendar-day"></i> DATE</label>
+                                <input type="date" class="form-control" id="date" placeholder="Enter your event date">
+                            </div>
+                            <div class="form-group">
+                                <label for="time"><i class="fas fa-clock"></i> TIME</label>
+                                <input type="time" class="form-control" id="time" placeholder="Enter your event time">
+                            </div>
+                            <div class="form-group">
+                                <label for="location"><i class="fas fa-map-marked-alt"></i> LOCATION</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter your event location">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="date"><i class="fas fa-calendar-day"></i> Event Date</label>
-                            <input type="date" class="form-control" id="date" placeholder="Enter your event date">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="directions"><i class="fas fa-file-alt"></i> Type your directions for
+                                    participants</label>
+                                <textarea class="form-control" id="directions" rows="6" maxlength="250"> </textarea>
+                                <p>max. 250 characters</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="time"><i class="fas fa-clock"></i> Event Time</label>
-                            <input type="time" class="form-control" id="time" placeholder="Enter your event time">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
+                                    Submit Event</button>
+                            </div>
+                            <div class="col-md-6"></div>
                         </div>
-                        <div class="form-group">
-                            <label for="time"><i class="fas fa-map-marked-alt"></i> Event Location</label>
-                            <input type="text" class="form-control" id="time" placeholder="Enter your event location">
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block" id="submitEventButt"><i class="fas fa-users"></i>
-                            Submit Event</button>
                     </form>
                 </div>
             </div>
