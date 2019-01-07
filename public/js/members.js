@@ -5,7 +5,6 @@ $(document).ready(function () {
     $.get("/api/user_data").then(function (data) {
 
         console.log(data);
-
         $(".member-name").text(data.first_name);
 
         if (data.avatar_source == null) {
