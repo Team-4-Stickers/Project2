@@ -16,16 +16,22 @@
 	{{!-- CSS --}}
 	<link rel="stylesheet" href="./styles/members.css">
 	<link rel="stylesheet" href="./styles/new.css">
-	{{!-- jQuery --}}
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	{{!-- Main View Javascript Functionality --}}
-	<script src="./js/members.js"></script>
-		<script src="./js/event.js"></script>
+
 </head>
 
 <body class="site">
 
 	{{{ body }}}
+	{{>event-code-modal}}
+
 </body>
+
+{{!-- jQuery --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{{!-- Bootstrap JS --}}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{{!-- Main View Javascript Functionality --}}
+<script src="./js/members.js"></script>
+<script src="./js/event.js"></script>
 
 </html>

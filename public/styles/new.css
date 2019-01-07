@@ -5,15 +5,6 @@
 .container-title {
     font-family: 'Fredoka One', cursive;
 }
-
-/* .form-group{
-    background-color: white;
-    padding: 5px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
-    border: 1px solid rgb(211, 211, 211, 0.5);
-    margin-right: 20px;
-  } */
   
 #event-name, #date, #time, #location {
     border: none;
@@ -21,9 +12,8 @@
     color: #3f6a8a;
     font-size: 15px;
     margin-left: 5px;
-    padding: 20px;
-    /* box-shadow: 0 4px 8px rgba(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7); */
     border-radius: 25px;
+    padding: 25px;
   }
   
   .form-control:focus{
@@ -43,4 +33,36 @@
     font-size: 15px;
     border: none;
     margin-bottom: 15px;
+  }
+
+  #directions {
+    border: none;
+    width: 95%;
+    color: #3f6a8a;
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 25px;
+  }
+
+  #directions-max {
+    font-size: 12px;
+    float: right;
+    padding-top: 2px;
+    padding-right: 20px;
+  }
+
+  #submitEventButt {
+    background-image: linear-gradient(to left top, #dda5b6, #ebb2b1, #f2c2b0, #f4d4b5, #f1e6c1);
+    box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 13px;
+    width: 90%;
+    margin-left: 22px;
+  }
+
+  .form-body {
+    padding: 80px 50px;
   }
