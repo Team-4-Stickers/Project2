@@ -6,7 +6,7 @@
     font-family: 'Fredoka One', cursive;
 }
   
-#event-name, #date, #time, #location {
+#event-name, #event-date, #event-time, #event-location {
     border: none;
     width: 95%;
     color: #3f6a8a;
@@ -35,7 +35,7 @@
     margin-bottom: 15px;
   }
 
-  #directions {
+  #event-directions {
     border: none;
     width: 95%;
     color: #3f6a8a;

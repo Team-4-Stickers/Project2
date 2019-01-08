@@ -49,6 +49,13 @@ module.exports = function (app) {
     });
 
   });
+
+  app.post("/api/event", function (req, res) {
+
+    console.log(req.body);
+
+  });
+
   // if (!req.user) {
   //   // The user is not logged in, send back an empty object
   //   res.json({});
