@@ -49,6 +49,14 @@ module.exports = function (app) {
     });
 
   });
+
+  //Get the event object and send it to the database
+  app.post("/api/event", function (req, res) {
+
+    console.log(req.body);
+
+  });
+
   // if (!req.user) {
   //   // The user is not logged in, send back an empty object
   //   res.json({});
