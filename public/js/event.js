@@ -24,7 +24,7 @@ $(document).ready(function () {
         $(".modal-body").text(uniqueCode);
         $("#exampleModal").modal("show");
 
-        // console.log(newEvent);
+        console.log(newEvent);
 
         $.post("/api/event", newEvent, function (data, status) {
             // console.log("Data: " + data + "\nStatus: " + status);
