@@ -9,7 +9,7 @@ $(document).ready(function () {
         var eventDate = $("input#event-date").val();
         var eventTime = $("input#event-time").val();
         var eventLocation = $("input#event-location").val();
-        var eventDirections = $("input#event-directions").val();
+        var eventDirections = $("#event-directions").val();
 
         var newEvent = {
             eventName,
