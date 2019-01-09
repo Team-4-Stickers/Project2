@@ -1,29 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <div class="navbar-nav">
-        <a class="nav-title" href="/members">GIFT MASTER</a>
-        <a class="nav-1 nav-item nav-link" href="/members">
-            <i class="fas fa-user-circle"></i> PROFILE
-        </a>
-        <a class="nav-2 nav-item nav-link" href="/join">
-            <i class="fas fa-users"></i> JOIN
-        </a>
-        <a class="nav-3 nav-item nav-link" href="/new">
-            <i class="fas fa-plus-circle"></i> NEW EVENT</a>
-        <a class="nav-4 nav-item nav-link" href="gifts">
-            <i class="fas fa-gift"></i> YOUR GIFTS</a>
-    </div>
-</nav>
+{{>navbar-block}}
 
 {{!-- Create new event --}}
 <div class="container">
 
     <div class="row">
         <div class="nopadding col-md-4">
-            <div class="left-top">
-                <!-- Anything you get back from passport user -->
-                <h2 class="member-display"><img class="avatar" src="" alt="Avatar"> Welcome <span class="member-name"></span>!</h2>
-            </div>
+
+            {{>welcome}}
+
             <div class="left-bottom">
                 <br>
             </div>
