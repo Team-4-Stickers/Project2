@@ -73,35 +73,34 @@ module.exports = function (app) {
 
 
 
-  // app.post("/api/signup", function (req, res) {
-  //   console.log(req.body.avatar_source);
-  //   db.User.create({
-  //     email: req.body.email,
-  //     password: req.body.password,
-  //     first_name: req.body.first_name,
-  //     last_name: req.body.last_name,
-  //     avatar_source: req.body.avatar_source,
-  //   }).then(function () {
-  //     res.redirect(307, "/api/login");
-  //   }).catch(function (err) {
-  //     console.log(err);
-  //     res.json(err);
-  //     // res.status(422).json(err.errors[0].message);
-  //   });
-  // });
-
-  // if (!req.user) {
-  //   // The user is not logged in, send back an empty object
-  //   res.json({});
-  // }
-  // else {
-  //   // Otherwise send back the user's email and id
-  //   // Sending back a password, even a hashed password, isn't a good idea
-  //   res.json({
-  //     name: req.user.first_name,
-  //     avatar: req.user.avatar_source
-  //   });
-  // }
-  // });
-
+  
+  app.get("/api/posts/:uniqueCode", function(req, res) {
+    db.Event.findOne({
+      where: {
+        uniqueCode: req.params.uniqueCode
+      }
+    }).then(function(dbEvent) {
+      console.log(dbEvent);
+      res.json(dbEvent);
+    });
+  });
 };
+
+// app.post("/api/gift", function (req, res) {
+//   console.log(req.body.giftName);
+//   db.Gift.create({
+//     giftName: req.body.giftName,
+//     giftPrice: req.body.giftPrice,
+//     giftStatus: req.body.giftStatus,
+//     buying: req.body.buying,
+   
+
+//   }).then(function () {
+//     res.redirect(307, "/api/new");
+//   }).catch(function (err) {
+//     console.log(err);
+//     res.json(err);
+//     res.status(422).json(err.errors.message);
+//   });
+//   console.log(req.body);
+// });
