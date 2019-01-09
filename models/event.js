@@ -5,25 +5,29 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       required: true
     },
-    date: {
+    eventDate: {
       type: DataTypes.DATEONLY,
       required: true
     },
-    time: {
+    eventTime: {
       type: DataTypes.TIME,
       required: true
     },
-    location: {
+    eventLocation: {
       type: DataTypes.TEXT,
       required: true
     },
-    direction: {
+    eventDirections: {
+      type: DataTypes.TEXT,
+      required: true
+    },
+    uniqueCode: {
       type: DataTypes.TEXT,
       required: true
     },
 
   });
- 
+  console.log(Event); 
   return Event;
 };
 

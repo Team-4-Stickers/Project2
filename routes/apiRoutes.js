@@ -52,10 +52,43 @@ module.exports = function (app) {
 
   //Get the event object and send it to the database
   app.post("/api/event", function (req, res) {
+    console.log(req.body.eventName);
+    db.Event.create({
+      eventName: req.body.eventName,
+      eventDate: req.body.eventDate,
+      eventTime: req.body.eventTime,
+      eventLocation: req.body.eventLocation,
+      eventDirections: req.body.eventDirections,
+      uniqueCode: req.body.uniqueCode,
 
+    }).then(function () {
+      res.redirect(307, "/api/new");
+    }).catch(function (err) {
+      console.log(err);
+      res.json(err);
+      res.status(422).json(err.errors.message);
+    });
     console.log(req.body);
-
   });
+
+
+
+  // app.post("/api/signup", function (req, res) {
+  //   console.log(req.body.avatar_source);
+  //   db.User.create({
+  //     email: req.body.email,
+  //     password: req.body.password,
+  //     first_name: req.body.first_name,
+  //     last_name: req.body.last_name,
+  //     avatar_source: req.body.avatar_source,
+  //   }).then(function () {
+  //     res.redirect(307, "/api/login");
+  //   }).catch(function (err) {
+  //     console.log(err);
+  //     res.json(err);
+  //     // res.status(422).json(err.errors[0].message);
+  //   });
+  // });
 
   // if (!req.user) {
   //   // The user is not logged in, send back an empty object
