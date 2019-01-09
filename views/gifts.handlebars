@@ -15,7 +15,27 @@
 
                 <h2>Gifts to Buy</h2>
 
+                <ul>
+                    {{#each first_name}}
+                    {{#if giving}}
+                    {{#unless giftstatus}}
+                    {{> gift-block giftstatus=false}}
+                    {{/unless}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
 
+                <h2>Completed Gifts</h2>
+
+                <ul>
+                    {{#each name}}
+                    {{#if giving}}
+                    {{#if giftstatus}}
+                    {{> gift-block giftstatus=true}}
+                    {{/if}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
 
 
             </div>

@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       required: true
     },
     eventDirections: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       required: true
     },
     uniqueCode: {
