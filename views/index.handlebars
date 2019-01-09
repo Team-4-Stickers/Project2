@@ -7,35 +7,70 @@
             {{>welcome}}
 
             <div class="left-bottom">
-
+                {{!-- nothing to display --}}
             </div>
         </div>
-
 
         <div class="nopadding col-md-8">
             <div class="right">
-                <div class="dropdownMenus col-md-12">
-                    <div class='form-field'>
-                        <label for='brandFilter'>Brand</label>
-                        <select id='brandFilter' class='form-control'>
-                            <option>Choose brand</option>
-                            <option>Choose brand</option>
-                            {{#each shoes}}
-                            <option value="{{this}}">{{this.brand}}</option>
-                            {{/each}}
-                        </select>
+                <form>
+                    <div class="row">
+                        <div class="dropdownMenus col-md-4">
+                            <div class="form-group">
+                                <label for="gift-name">GIFT NAME</label>
+                                <input type="text" class="form-control" id="gift-name" placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="gift-event">CHOOSE EVENT</label>
+                                <div class="rounded-option">
+                                    <select id="gift-event" class="form-control">
+                                        {{#each event}}
+                                        <option value="{{this.eventName}}">{{this.eventName}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gift-price">PRICE RANGE</label>
+                                <div class="rounded-option">
+                                    <select class="form-control" id="gift-price">
+                                        <option value="$0.00 - $20.00">$0.00 - $20.00</option>
+                                        <option value="$20.00 - $50.00">$20.00 - $50.00</option>
+                                        <option value="$50.00 - $100.00">$50.00 - $100.00</option>
+                                        <option value="$100.00 - $500.00">$100.00 - $500.00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <label for="gift-link">GIFT LINK</label>
+                                <input type="email" class="form-control" id="gift-link" placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="gift-comment">COMMENTS FOR EVENT MEMBERS</label>
+                                <textarea class="form-control" id="gift-comment" rows="6" maxlength="100"> </textarea>
+                                <p id="comment-max">max. 100 characters</p>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
                     </div>
-
-
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button class="btn btn-success btn-block" type="submit" id="submitGiftButt"><i class="fas fa-gift"></i>
+                                CREATE GIFT</button>
+                        </div>
+                        <div class="col-md-8"></div>
+                    </div>
+                </form>
+                <div class="row">
                     <p>GIFTS YOU HAVE ADDED:</p>
                     <div id="your-gifts">
-
+                        {{!-- this is where thing are appended --}}
                     </div>
-
                 </div>
             </div>
         </div>
-
     </div>
 
     <footer>
