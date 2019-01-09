@@ -71,36 +71,33 @@ module.exports = function (app) {
     console.log(req.body);
   });
 
-
-
-  
-  app.get("/api/posts/:uniqueCode", function(req, res) {
+  app.get("/api/posts/:uniqueCode", function (req, res) {
     db.Event.findOne({
       where: {
         uniqueCode: req.params.uniqueCode
       }
-    }).then(function(dbEvent) {
+    }).then(function (dbEvent) {
       console.log(dbEvent);
       res.json(dbEvent);
     });
   });
+
+  app.post("/api/gift", function (req, res) {
+    console.log(req.body.giftName);
+    db.Gift.create({
+      giftName: req.body.giftName,
+      priceRange: req.body.priceRange,
+      giftLink: req.body.giftLink,
+      giftComment: req.body.giftComment
+
+
+    }).then(function () {
+      res.redirect(307, "/api/new");
+    }).catch(function (err) {
+      console.log(err);
+      res.json(err);
+      res.status(422).json(err.errors.message);
+    });
+    console.log(req.body);
+  });
 };
-
-// app.post("/api/gift", function (req, res) {
-//   console.log(req.body.giftName);
-//   db.Gift.create({
-//     giftName: req.body.giftName,
-//     giftPrice: req.body.giftPrice,
-//     giftStatus: req.body.giftStatus,
-//     buying: req.body.buying,
-   
-
-//   }).then(function () {
-//     res.redirect(307, "/api/new");
-//   }).catch(function (err) {
-//     console.log(err);
-//     res.json(err);
-//     res.status(422).json(err.errors.message);
-//   });
-//   console.log(req.body);
-// });
