@@ -5,11 +5,11 @@ $(document).ready(function () {
         event.preventDefault();
 
         var uniqueCode = Math.floor(1000 + Math.random() * 9000);
-        var eventName = $("#event-name").val();
-        var eventDate = $("#event-date").val();
-        var eventTime = $("#event-time").val();
-        var eventLocation = $("#event-location").val();
-        var eventDirections = $("#event-directions").val();
+        var eventName = $("input#event-name").val();
+        var eventDate = $("input#event-date").val();
+        var eventTime = $("input#event-time").val();
+        var eventLocation = $("input#event-location").val();
+        var eventDirections = $("input#event-directions").val();
 
         var newEvent = {
             eventName,
