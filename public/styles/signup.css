@@ -1,6 +1,9 @@
+/* Background image */
 body {
     background-image: url("../images/background_white.png");
     background-size:cover;
+    background-repeat: no-repeat;
+    overflow-x:hidden;
   }
 
   /* Sign up page title */
@@ -75,6 +78,7 @@ body {
   color: white;
   font-size: 15px;
   border: none;
+  width: 95%;
   padding: 15px 39% 15px 39%;
 }
 
@@ -139,4 +143,27 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Media query responsiveness */
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url("../images/background_white_copy.png");
+  }
+
+  .sign-up-title {
+    font-size: 50px;
+  }
+
+  .form-group {
+    margin-right: 0;
+  }
+
+  .btn-default {
+    width: 100%;
+  }
+
+  .log-in {
+    margin-left: 45%;
+  }
 }

@@ -1,6 +1,9 @@
+/* Background image */
 body {
   background-image: url("../images/background_white.png");
   background-size:cover;
+  background-repeat: no-repeat;
+  overflow-x:hidden;
 }
 
 /* Title */
@@ -55,6 +58,7 @@ body {
   color: lightgray;
 }
 
+/* Submit button */
 .btn-default {
   background-image: linear-gradient(to left top, #dda5b6, #ebb2b1, #f2c2b0, #f4d4b5, #f1e6c1);
   box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
@@ -81,4 +85,31 @@ body {
 .sign-up-link:hover {
   color: #dda5b6;
   text-decoration: none;
+}
+
+/* Media query responsiveness */
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url("../images/background_white_copy.png");
+  }
+
+  .fadeInLeft {
+    font-size: 50px;
+    margin-top: 30%;
+  }
+  
+  .form-group {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .btn-default {
+    width: 50%;
+    margin-left: 25%;
+    padding: 15px;
+  }
+
+  .sign-up {
+    margin-left: 40%;
+  }
 }
