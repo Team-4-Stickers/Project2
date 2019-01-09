@@ -1,0 +1,85 @@
+.container {
+    color: #3f6a8a;
+}
+
+/* .container-title {
+    font-family: 'Fredoka One', cursive;
+} */
+  
+#gift-name, #gift-link {
+    border: none;
+    width: 95%;
+    color: #3f6a8a;
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 25px;
+    padding: 25px;
+    background-color: white;
+  }
+
+  #gift-event, #gift-price {
+    border: none;
+    color: #3f6a8a;
+  }
+
+  .rounded-option {
+    border: none;
+    width: 95%;
+    color: #3f6a8a;
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 25px;
+    padding: 7px 25px 7px 25px;
+    background-color: white;
+  }
+
+  .form-control:focus{
+    border-color: #cccccc;
+    box-shadow: none;
+  }
+  
+  .form-control::placeholder {
+    color: lightgray;
+  }
+  
+  .btn-default {
+    background-image: linear-gradient(to left top, #dda5b6, #ebb2b1, #f2c2b0, #f4d4b5, #f1e6c1);
+    box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 15px;
+  }
+
+  #gift-comment {
+    border: none;
+    width: 95%;
+    color: #3f6a8a;
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 25px;
+  }
+
+  #comment-max {
+    font-size: 12px;
+    float: right;
+    padding-top: 2px;
+    padding-right: 20px;
+  }
+
+  #submitGiftButt {
+    background-image: linear-gradient(to left top, #dda5b6, #ebb2b1, #f2c2b0, #f4d4b5, #f1e6c1);
+    box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 13px;
+    width: 90%;
+    margin-left: 22px;
+  }
+
+  .form-body {
+    padding: 80px 50px;
+  }
