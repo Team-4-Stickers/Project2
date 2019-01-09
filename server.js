@@ -3,7 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 var session = require("express-session");
-var randomCodes = require("./config/randomCodes");
+
 
 var db = require("./models");
 
@@ -48,11 +48,7 @@ db.sequelize.sync(syncOptions).then(function () {
 var assert = require('assert');
 
 //RANDOM CODE GENERATOR
-var RandomCodes = require('./config/randomCodes');
-var rc = new RandomCodes();
-console.log("OPTIONS: %j", rc.getOptions());
-var code = rc.generate();
-console.log("CODE: %s", code);
+
 
 
 console.log(syncOptions);
