@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     giftStatus: {
       type: DataTypes.BOOLEAN,
       required: true,
-      default: false
+      defaultValue: false
     }
   });
   console.log(Gift);

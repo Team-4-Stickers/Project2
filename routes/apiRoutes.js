@@ -83,9 +83,10 @@ module.exports = function (app) {
   });
 
   app.post("/api/gift", function (req, res) {
-    console.log(req.body.giftName);
+    console.log(req.body);
     db.Gift.create({
       giftName: req.body.giftName,
+      // giftEvent: req.body.giftEvent,
       priceRange: req.body.priceRange,
       giftLink: req.body.giftLink,
       giftComment: req.body.giftComment,
@@ -93,12 +94,13 @@ module.exports = function (app) {
 
 
     }).then(function () {
-      res.redirect(307, "/api/new");
-    }).catch(function (err) {
-      console.log(err);
-      res.json(err);
-      res.status(422).json(err.errors.message);
+      //   res.redirect(307, "/api/new");
+      // }).catch(function (err) {
+      //   console.log(err);
+      //   res.json(err);
+      //   res.status(422).json(err.errors.message);
+      // });
+      console.log(res);
     });
-    console.log(req.body);
   });
 };
