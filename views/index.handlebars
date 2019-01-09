@@ -14,29 +14,34 @@
 
         <div class="nopadding col-md-8">
             <div class="right">
-                <div id="your-gifts">
+                <div class="dropdownMenus col-md-12">
+                    <div class='form-field'>
+                        <label for='brandFilter'>Brand</label>
+                        <select id='brandFilter' class='form-control'>
+                            <option>Choose brand</option>
+                            <option>Choose brand</option>
+                            {{#each shoes}}
+                            <option value="{{this}}">{{this.brand}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
 
 
-                    <!-- group display -->
-                    <br>
-                    <!--<h2>EVENTS</h2>
-                    <ul>
-                         maybe don't need this partial
-                        {{#each user.event}}
-                        {{event-block}}
-                        {{/each}}
-                    </ul> -->
+                    <p>GIFTS YOU HAVE ADDED:</p>
+                    <div id="your-gifts">
+
+                    </div>
+
                 </div>
             </div>
         </div>
+
     </div>
 
-</div>
+    <footer>
+        <p id="copyright">Copyright &copy Stickers 2019</p>
+        <!-- Logout option -->
+        <a class="logout" href="/logout">LOG OUT</a>
+    </footer>
 
-<footer>
-    <p id="copyright">Copyright &copy Stickers 2019</p>
-    <!-- Logout option -->
-    <a class="logout" href="/logout">LOG OUT</a>
-</footer>
-
-{{>bottom-navbar-block}}
+    {{>bottom-navbar-block}}
