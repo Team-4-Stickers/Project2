@@ -88,7 +88,8 @@ module.exports = function (app) {
       giftName: req.body.giftName,
       priceRange: req.body.priceRange,
       giftLink: req.body.giftLink,
-      giftComment: req.body.giftComment
+      giftComment: req.body.giftComment,
+      giftStatus: false
 
 
     }).then(function () {
