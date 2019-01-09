@@ -53,7 +53,18 @@ module.exports = function (app) {
   //Render the join page
   app.get("/join", isAuthenticated, function (req, res) {
 
-    res.render("join", {});
+    var hbsObject = {
+      event: {
+        eventName: "Galentine's Day",
+        eventDate: '2019-01-27',
+        eventTime: '10:00',
+        eventLocation: 'NW',
+        eventDirections: ' Do what I say, buy gifts!',
+        uniqueCode: '6852'
+      }
+    };
+
+    res.render("join", hbsObject);
 
   });
 };
