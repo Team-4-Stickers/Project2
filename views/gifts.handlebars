@@ -4,37 +4,65 @@
     <div class="row">
         <div class="nopadding col-md-4">
 
-            {{>welcome}}
+            <div class="left-top">
+                {{>welcome}} <span class="display-message">buy the gifts!</span>
+            </div>
 
             <div class="left-bottom">
-
+                <br>
+                <p>
+                    Double check if you purchased all the gifts for your event!
+                </p>
+                <p>It will be a spledid suprise!</p>
             </div>
         </div>
         <div class="nopadding col-md-8">
             <div class="right">
 
-                <h2>Gifts to Buy</h2>
 
                 <ul>
-                    {{#each first_name}}
+                    <div class="display-gift">
+                        <div>
+                            <h4>PENDING GIFTS</h4>
+                            <p class="my-gift">
+                                {{!-- hardcoded data for future development --}}
+                                Gift: swiss knife || For: Monica Portaletico
+                            </p>
+                            <button type="submit" class="btn btn-outline-dark-block deleteButt">DROP GIFT</button>
+                        </div>
+                        <div>
+                            <p class="my-gift">
+                                {{!-- hardcoded data for future development --}}
+                                Gift: xbox || For: Georgio Armanitto
+                            </p>
+                            <button type="submit" class="btn btn-outline-dark-block deleteButt">DROP GIFT</button>
+                        </div>
+                    </div>
+                    {{!-- {{#each first_name}}
                     {{#if giving}}
                     {{#unless giftstatus}}
                     {{> gift-block giftstatus=false}}
                     {{/unless}}
                     {{/if}}
-                    {{/each}}
+                    {{/each}} --}}
                 </ul>
 
-                <h2>Completed Gifts</h2>
 
                 <ul>
-                    {{#each name}}
+                    <div class="display-gift">
+                        <h4>GIFTS BOUGHT</h4>
+                        <p class="gray my-gift">
+                            {{!-- hardcoded data for future development --}}
+                            Gift: corkscrew || For: Mike Hike
+                        </p>
+                    </div>
+                    {{!-- {{#each name}}
                     {{#if giving}}
                     {{#if giftstatus}}
                     {{> gift-block giftstatus=true}}
                     {{/if}}
                     {{/if}}
-                    {{/each}}
+                    {{/each}} --}}
                 </ul>
 
 

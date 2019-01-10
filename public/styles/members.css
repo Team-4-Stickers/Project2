@@ -32,6 +32,11 @@ body {
   h2 {
     color: #3f6a8a;
   }
+
+  .display-message {
+    font-size: 25px;
+    font-weight: 200;
+  }
   
   hr {
     border: 1px solid white;
@@ -42,10 +47,13 @@ body {
     .search-container {
       background-color: white;
       padding: 5px;
+      margin: 0 10% 0 10%;
       border-radius: 25px;
       box-shadow:0 0 8px #666;
     }
-    
+    .search-results {
+      visibility: hidden;
+    }
     /* Fix input box and button color */
     .input, .submit {
       border: none;
@@ -53,11 +61,12 @@ body {
     }
     
     .input {
-      width: 90%;
+      width: 85%;
       color: #3f6a8a;
       font-size: 15px;
       padding: 5px;
       margin-left: 5px;
+      text-align: center;
     }
     
     .input:focus {
@@ -192,6 +201,7 @@ body {
   }
 
   .left-bottom {
+    padding: 10%;
     height: 400px;
     background-color: #3f6a8a;
     box-shadow: 0 4px 8px rgb(77, 94, 114, 0.7), 2px 8px 10px rgb(221, 165, 182, 0.7), 6px 10px 14px rgb(241, 230, 193, 0.7);

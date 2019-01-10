@@ -1,10 +1,6 @@
 .container {
     color: #3f6a8a;
 }
-
-/* .container-title {
-    font-family: 'Fredoka One', cursive;
-} */
   
 #gift-name, #gift-link {
     border: none;
@@ -76,10 +72,64 @@
     font-size: 15px;
     border: none;
     padding: 13px;
-    width: 90%;
-    margin-left: 22px;
+    width: 92%;
+    margin-left: 3%;
   }
 
   .form-body {
     padding: 80px 50px;
+  }
+
+  #add-gift {
+    padding: 5%;
+  }
+
+  #your-gifts-title, #my-events-title, #members-title {
+    margin-left: 7%;
+    font-weight: bold;
+  }
+
+ #members-title {
+    margin-top: 20px;
+  }
+
+  .member {
+    background-color: white;
+    margin-left: 6%;
+    height: 200px;
+  }
+
+  .my-gift {
+    margin-left: 7%;
+    padding: 7px;
+    background-color: white;
+    display: inline;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  .deleteButt {
+    background-color: #3f6a8a;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 7px;
+    margin-left: 2%;
+    margin-bottom: 15px;
+  }
+
+  .deleteButt:hover {
+    color: #dda5b6;
+  }
+
+  .gray {
+    color: lightgray;
+  }
+
+  .display-gift {
+    width: 90%;
+    height: 250px;
+    padding-top: 30px;
+    padding-left: 7%;
   }

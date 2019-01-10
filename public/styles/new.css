@@ -66,3 +66,23 @@
   .form-body {
     padding: 80px 50px;
   }
+
+  .left-bottom {
+    color: white;
+    text-align: center;
+    font-weight: 200;
+  }
+
+/* Modal Content/Box */
+.modal-content {
+  color: #3f6a8a;
+  font-weight: bold;
+  background-color: #fefefe;
+  margin-top: 200px;
+  border: 1px solid #888;
+}
+
+#copy {
+  text-align: center;
+  font-size: 45px;
+}

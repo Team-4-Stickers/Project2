@@ -70,10 +70,11 @@ module.exports = function (app) {
     });
     console.log(req.body);
   });
-  app.get("/api/posts/:eventName", function (req, res) {
+
+  app.get("/api/event/:eventName", function (req, res) {
     db.Event.findOne({
       where: {
-        eventName: event
+        eventName: params.body.eventName
       }
     }).then(function (dbEvent) {
       console.log(dbEvent);
@@ -81,9 +82,9 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/posts/:uniqueCode", function (req, res) {
+  app.get("/api/join/:uniqueCode", function (req, res) {
 
-    // console.log(req.params.uniqueCode);
+    console.log(req.params.uniqueCode);
 
     db.Event.findOne({
       where: {
@@ -120,4 +121,29 @@ module.exports = function (app) {
       res.end();
     });
   });
+
+  app.put("/api/eventadded/:id", function (req, res) {
+
+    var status = Boolean(req.body.eventStatus);
+    console.log(status);
+    console.log(req.params.id);
+
+    db.Event.update(
+      {
+        eventStatus: status
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }).then(function (result) {
+        if (result.changedRows === 0) {
+          // If no rows were added, then the ID must not exist, so 404
+          return res.status(404).end();
+        }
+
+        res.status(200).end();
+      });
+  });
+
 };

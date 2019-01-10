@@ -24,10 +24,29 @@ $(document).ready(function () {
         $(".modal-body").text(uniqueCode);
         $("#exampleModal").modal("show");
 
+        //Copy code to clipboard
+        $("#copy-btn").attr("data-clipboard-text", uniqueCode);
+
+        var clipboard = new ClipboardJS('.btn');
+
+        clipboard.on('success', function (e) {
+            console.log(e);
+        });
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+
         console.log(newEvent);
 
         $.post("/api/event", newEvent, function (data, status) {
-            // console.log("Data: " + data + "\nStatus: " + status);
+
         });
+
+        $("input#event-name").val("");
+        $("input#event-date").val("");
+        $("input#event-time").val("");
+        $("input#event-location").val("");
+        $("#event-directions").val("");
+
     });
 });

@@ -4,18 +4,25 @@
     <div class="row">
         <div class="nopadding col-md-4">
 
-            {{>welcome}}
+            <div class="left-top">
+                {{>welcome}} <span class="display-message">add your gift!</span>
+            </div>
 
             <div class="left-bottom">
-                {{!-- nothing to display --}}
+                <br>
+                <p>
+                    Let other event members know what your dream gifts are!
+                </p>
+                <p>
+                    If you can't find an event to add the gift to, first join and event. </p>
             </div>
         </div>
 
         <div class="nopadding col-md-8">
             <div class="right">
-                <form>
+                <form id="add-gift">
                     <div class="row">
-                        <div class="dropdownMenus col-md-4">
+                        <div class="dropdownMenus col-md-5">
                             <div class="form-group">
                                 <label for="gift-name">GIFT NAME</label>
                                 <input type="text" class="form-control" id="gift-name" placeholder="Dream Present">
@@ -56,24 +63,23 @@
                         <div class="col-md-1"></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <button class="btn btn-success btn-block" type="submit" id="submitGiftButt"><i class="fas fa-gift"></i>
                                 CREATE GIFT</button>
                         </div>
-                        <div class="col-md-8"></div>
+                        <div class="col-md-7"></div>
                     </div>
                 </form>
                 <div class="row">
-                    <p>GIFTS YOU HAVE ADDED:</p>
+                    <p id="your-gifts-title">GIFTS YOU HAVE ADDED:</p>
                     <div id="your-gifts">
                         {{!-- this is where thing are appended --}}
                         {{#each gift}}
-                        {{!-- {{#if devoured}} --}}
-                        <p>
-                            {{giftName}} {{priceRange}} {{giftLink}} {{giftComment}}
-                            <button type="submit" class="btn btn-outline-dark-block deleteButt" data-id="{{id}}">DELETE</button>
+                        <p class="my-gift">
+                            Gift: {{giftName}} || Price: {{priceRange}} || Link: {{giftLink}} || Comments:
+                            {{giftComment}}
                         </p>
-                        {{!-- {{/if}} --}}
+                        <button type="submit" class="btn btn-outline-dark-block deleteButt" data-id="{{id}}">DELETE</button>
                         {{/each}}
 
                     </div>
