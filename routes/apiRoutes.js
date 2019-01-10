@@ -72,6 +72,9 @@ module.exports = function (app) {
   });
 
   app.get("/api/posts/:uniqueCode", function (req, res) {
+
+    // console.log(req.params.uniqueCode);
+
     db.Event.findOne({
       where: {
         uniqueCode: req.params.uniqueCode
@@ -80,7 +83,7 @@ module.exports = function (app) {
 
       console.log(dbEvent);
 
-      // res.redirect("/join", { event: dbEvent });
+      res.json(dbEvent);
 
     });
   });

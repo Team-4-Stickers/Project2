@@ -34,7 +34,7 @@ module.exports = function (app) {
     // Render the join page
     app.get("/join", isAuthenticated, function (req, res) {
 
-        res.render("join", {});
+        res.render("join", {}); 
 
     });
 
