@@ -6,7 +6,12 @@ $(document).ready(function () {
 
         // /api/posts/:uniqueCode
         $.get("/api/posts/" + codeInput, function (data) {
-            // console.log(data);
+
+            let yourEvent = $("<p>").html(`Event: "${data.eventName}" on ${data.eventDate} ${data.eventTime} at ${data.eventLocation}`);
+            let yourMessage = $("<p>").html(`Directions: "${data.eventDirections}`);
+
+            $(".search-results").append(yourEvent);
+            $(".search-results").append(yourMessage);
         });
     });
 });
