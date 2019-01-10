@@ -34,7 +34,20 @@ module.exports = function (app) {
     // Render the join page
     app.get("/join", isAuthenticated, function (req, res) {
 
-        res.render("join", {}); 
+
+        db.Event.findAll(
+            {
+                where: {
+                    eventStatus: true
+                }
+            }
+        ).then(function (eventObject) {
+
+            console.log(eventObject);
+
+            res.render("join", { event: eventObject });
+
+        });
 
     });
 

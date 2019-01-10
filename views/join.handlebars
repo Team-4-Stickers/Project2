@@ -3,38 +3,46 @@
 <div class="container">
     <div class="row">
         <div class="nopadding col-md-4">
-
-            {{>welcome}}
-
+            <div class="left-top">
+                {{>welcome}} <span class="display-message">join an event!</span>
+            </div>
             <div class="left-bottom">
                 <br>
+                <p>
+                    Join your event with the code provided by the event organizer!
+                </p>
                 {{!-- Search your events --}}
                 <h2>SEARCH</h2>
                 <div class="search-container">
+                    <label for="code-inpit"></label>
                     <input id="code-input" class="input" type="text" placeholder=" Enter Event Code" name="groupSearch">
                     <button id="join-event" class="submit" type="submit">
-                        <i class="fa fa-search"></i>
+                        <i class="fas fa-plus-circle"></i>
                     </button>
                 </div>
             </div>
         </div>
         <div class="nopadding col-md-8">
             <div class="right">
-                <div> If a friend invited you to an existing event, search for it by entering the unique event code!</div>
+
                 <br>
                 {{!-- Append the search results --}}
                 <div class="search-results">
-                    {{#each event}}
-                    <p>
-                        {{eventName}}
-                        {{eventDate}}
-                        {{eventTime}}
-                        {{eventLocation}}
-                    </p>
-                    {{/each}}
-                    {{!-- append event members --}}
-                    {{!-- {{>member-block}} --}}
+                    {{!-- currently the data loads through a json abject here to add an attribute to change the status
+                    of the event --}}
                 </div>
+                <p id="my-events-title">MY EVENTS</p>
+                {{#each event}}
+                <p class="my-gift">
+                    Event: {{eventName}}
+                    || Date: {{eventDate}} || Time: {{eventTime}} || Location:
+                    {{eventLocation}} || Directions: {{eventDirections}}
+                </p>
+
+                {{/each}}
+                {{!-- append event members --}}
+                {{>member-block}}
+
             </div>
         </div>
     </div>

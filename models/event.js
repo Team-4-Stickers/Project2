@@ -25,15 +25,21 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       required: true
     },
+    eventStatus: {
+      type: DataTypes.BOOLEAN,
+      required: true,
+      defaultValue: false
+    }
 
   });
-  Event.associate = function(models) {
+  Event.associate = function (models) {
     Event.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
-    }); };
-  console.log(Event); 
+    });
+  };
+  console.log(Event);
   return Event;
 };
 

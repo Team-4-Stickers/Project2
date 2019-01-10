@@ -20,8 +20,10 @@ $(document).ready(function () {
 
         $.post("/api/gift", newGift, function (data, status) {
             // console.log("Data: " + data + "\nStatus: " + status);
-            location.reload();
         });
+
+        location.reload();
+
     });
 
     $(".deleteButt").click(function (id) {
@@ -31,8 +33,10 @@ $(document).ready(function () {
             url: "/api/gift/" + id
         }).then(function () {
             console.log("Deleted Successfully");
-            location.reload();
         });
+
+        location.reload();
+
     });
 
 });
