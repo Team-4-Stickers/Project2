@@ -24,8 +24,16 @@
                 <br>
                 {{!-- Append the search results --}}
                 <div class="search-results">
+                    {{#each event}}
+                    <p>
+                        {{eventName}}
+                        {{eventDate}}
+                        {{eventTime}}
+                        {{eventLocation}}
+                    </p>
+                    {{/each}}
                     {{!-- append event members --}}
-                    {{>member-block}}
+                    {{!-- {{>member-block}} --}}
                 </div>
             </div>
         </div>
