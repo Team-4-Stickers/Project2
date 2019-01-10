@@ -5,8 +5,15 @@ $(document).ready(function () {
         var codeInput = $("#code-input").val();
 
         // /api/posts/:uniqueCode
-        $.get("/api/posts/" + codeInput, function (data) {
-            // console.log(data);
-        });
-    });
-});
+        $.get("/api/posts/:unqiueCode", function (data) {
+            db.Event.findOne({
+                where: {
+                  eventName: event
+                }
+              }).then(function (dbEvent) {
+                console.log(dbEvent);
+                res.json(dbEvent);
+              });
+            });
+    
+});});

@@ -70,6 +70,16 @@ module.exports = function (app) {
     });
     console.log(req.body);
   });
+  app.get("/api/posts/:eventName", function (req, res) {
+    db.Event.findOne({
+      where: {
+        eventName: event
+      }
+    }).then(function (dbEvent) {
+      console.log(dbEvent);
+      res.json(dbEvent);
+    });
+  });
 
   app.get("/api/posts/:uniqueCode", function (req, res) {
 
