@@ -107,16 +107,17 @@ module.exports = function (app) {
       giftLink: req.body.giftLink,
       giftComment: req.body.giftComment,
       giftStatus: false
+    }).then(function (result) {
+    });
+  });
 
-
+  app.delete("/api/gift/:id", function (req, res) {
+    db.Gift.destroy({
+      where: {
+        id: req.params.id
+      }
     }).then(function () {
-      //   res.redirect(307, "/api/new");
-      // }).catch(function (err) {
-      //   console.log(err);
-      //   res.json(err);
-      //   res.status(422).json(err.errors.message);
-      // });
-      // console.log(res);
+      res.end();
     });
   });
 };
