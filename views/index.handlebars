@@ -67,7 +67,15 @@
                     <p>GIFTS YOU HAVE ADDED:</p>
                     <div id="your-gifts">
                         {{!-- this is where thing are appended --}}
-                        {{this.giftName}}
+                        {{#each gift}}
+                        {{!-- {{#if devoured}} --}}
+                        <p>
+                            {{giftName}} {{priceRange}} {{giftLink}} {{giftComment}}
+                            <button type="submit" class="btn btn-outline-dark-block">DELETE</button>
+                        </p>
+                        {{!-- {{/if}} --}}
+                        {{/each}}
+
                     </div>
                 </div>
             </div>
