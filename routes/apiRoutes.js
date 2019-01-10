@@ -70,6 +70,16 @@ module.exports = function (app) {
     });
     console.log(req.body);
   });
+  app.get("/api/posts/:eventName", function (req, res) {
+    db.Event.findOne({
+      where: {
+        eventName: event
+      }
+    }).then(function (dbEvent) {
+      console.log(dbEvent);
+      res.json(dbEvent);
+    });
+  });
 
   app.get("/api/posts/:uniqueCode", function (req, res) {
 
@@ -97,16 +107,17 @@ module.exports = function (app) {
       giftLink: req.body.giftLink,
       giftComment: req.body.giftComment,
       giftStatus: false
+    }).then(function (result) {
+    });
+  });
 
-
+  app.delete("/api/gift/:id", function (req, res) {
+    db.Gift.destroy({
+      where: {
+        id: req.params.id
+      }
     }).then(function () {
-      //   res.redirect(307, "/api/new");
-      // }).catch(function (err) {
-      //   console.log(err);
-      //   res.json(err);
-      //   res.status(422).json(err.errors.message);
-      // });
-      // console.log(res);
+      res.end();
     });
   });
 };

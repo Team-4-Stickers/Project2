@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("#submitGiftButt").click(function () {
 
         event.preventDefault();
@@ -19,6 +20,18 @@ $(document).ready(function () {
 
         $.post("/api/gift", newGift, function (data, status) {
             // console.log("Data: " + data + "\nStatus: " + status);
+            location.reload();
+        });
+    });
+
+    $(".deleteButt").click(function (id) {
+        var id = $(this).data("id");
+        $.ajax({
+            method: "DELETE",
+            url: "/api/gift/" + id
+        }).then(function () {
+            console.log("Deleted Successfully");
+            location.reload();
         });
     });
 
