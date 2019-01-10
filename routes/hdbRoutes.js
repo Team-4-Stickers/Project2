@@ -8,17 +8,13 @@ module.exports = function (app) {
     // Render the profile page:
     app.get("/members", isAuthenticated, function (req, res) {
 
-        db.Gift.findOne({ where: { giftName: req.user.giftName } }).then(function (giftObject) {
+        console.log("hit the route");
+
+        db.Gift.findAll().then(function (giftObject) {
 
             console.log(giftObject);
 
-            // var hbsObject = {
-            //     gift: {
-            //         giftObject
-            //     }
-            // };
-
-            res.render("index", giftObject);
+            res.render("index", { gift: giftObject });
 
         });
     });

@@ -100,7 +100,7 @@ module.exports = function (app) {
       //   res.json(err);
       //   res.status(422).json(err.errors.message);
       // });
-      console.log(res);
+      // console.log(res);
     });
   });
 };
