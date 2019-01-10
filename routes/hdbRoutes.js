@@ -47,8 +47,8 @@ module.exports = function (app) {
             }
         };
 
-        res.render("join", hbsObject);
-
+        res.render("join", hbsObject.event);
+        // res.json(hbsObject);
     });
 
 };
