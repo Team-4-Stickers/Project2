@@ -87,8 +87,11 @@ module.exports = function (app) {
         uniqueCode: req.params.uniqueCode
       }
     }).then(function (dbEvent) {
+
       console.log(dbEvent);
-      res.json(dbEvent);
+
+      // res.redirect("/join", { event: dbEvent });
+
     });
   });
 

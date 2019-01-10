@@ -8,8 +8,6 @@ module.exports = function (app) {
     // Render the profile page:
     app.get("/members", isAuthenticated, function (req, res) {
 
-        console.log("hit the route");
-
         db.Gift.findAll().then(function (giftObject) {
 
             console.log(giftObject);
@@ -33,22 +31,10 @@ module.exports = function (app) {
 
     });
 
-    //Render the join page
+    // Render the join page
     app.get("/join", isAuthenticated, function (req, res) {
 
-        var hbsObject = {
-            event: {
-                eventName: "Galentine's Day",
-                eventDate: '2019-01-27',
-                eventTime: '10:00',
-                eventLocation: 'NW',
-                eventDirections: ' Do what I say, buy gifts!',
-                uniqueCode: '6852'
-            }
-        };
-
-        res.render("join", hbsObject.event);
-        // res.json(hbsObject);
+        res.render("join", {});
     });
 
 };
